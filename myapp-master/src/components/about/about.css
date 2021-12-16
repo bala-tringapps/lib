@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_about {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  background-color: #f0f8ff;
+  margin-top: 50px;
+  margin-left: 20%;
+  border-style: none;
+  box-shadow: 3px 3px 3px #a8a8a8;
+  border-radius: 20px;
+}
+.profile-head {
+  width: 40%;
+  height: 100%;
+  padding: 30px;
+}
+
+.user-detail {
+  font-size: large;
+  width: 40%;
+  height: 40%;
+}
+.container_about,
+.profile-img {
+  width: 50%;
+}
+
+.userlabel {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+.userinfo {
+  font-size: 15px;
+}
