@@ -54,10 +54,15 @@ const Books = () => {
         renewdate: duedate,
       })
 
-      axios.put(
-        `${BASE_URL}/books/${transdata.BookId}/${userdetails.logdata.userId}`,
-        {}
-      )
+      axios
+        .put(
+          `${BASE_URL}/books/${transdata.BookId}/${userdetails.logdata.userId}`,
+          {}
+        )
+        .then(async function () {
+          const data = await axios.get(`${BASE_URL}/books`)
+          setbooks(data.data)
+        })
     } catch (e) {
       console.log(e)
     }
@@ -70,12 +75,12 @@ const Books = () => {
       <Navigation />
       <h2 className='book_detail'>Book details</h2>
       <div className='searchContainer'>
-      <span>
-        <label htmlFor='search' className='search_label'>
+        <span>
+          <label htmlFor='search' className='search_label'>
             Search Book
-        </label>
-      </span>
-      <span>
+          </label>
+        </span>
+        <span>
           <input
             htmlFor='search'
             placeholder='Click to Search'

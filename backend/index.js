@@ -43,7 +43,7 @@ app.get('/books', getbook)
 app.post('/books', postbook)
 app.put('/books/:BookId/:UserId', countdec)
 app.put('/books/:BookId', countinc)
-
+app.put('/users/:UserId/:duedate', signupcontrol.updatefine)
 app.post('/add', signupcontrol.addUser)
 app.post('/login', signupcontrol.log)
 app.get('/getUser/:email', signupcontrol.getUser)

@@ -11,7 +11,7 @@
   border-radius: 2px;
 }
 table {
-  box-shadow: 3px 3px 3px #a3aaaf;
+  box-shadow: 10px 10px 10px #a3aaaf;
 }
 #heading th {
   color: #ffffff;
@@ -51,4 +51,9 @@ tr:nth-child(even) {
 .btn:hover {
   background-color: #000000;
   color: #ffa811;
+}
+
+tr:nth-child(even):hover {
+  background-color: #f38b8b;
+  color: #000000;
 }

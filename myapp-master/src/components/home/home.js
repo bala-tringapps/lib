@@ -3,8 +3,8 @@ import './home.css'
 import Navigation from '../navigation/nav'
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       message: 'Tring Library Management',
     }

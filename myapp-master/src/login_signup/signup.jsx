@@ -70,7 +70,7 @@ const Signup = () => {
             className='input_field'
             placeholder='Enter Password'
             required
-            pattern='[A-Z]{1}[a-z]{5,}[0-9]{2}'
+            pattern='[A-Z]{1}[a-z]{6,}[0-9]{2}'
           ></input>
         </label>
 
@@ -89,9 +89,12 @@ const Signup = () => {
         <button className='register_btn'>Register</button>
       </form>
       <div className='instructions'>
-          <h5>Instructions:</h5>
-          <p>1)Password:Alphanumeric First letter should be uppercase. Example(Bala12,Yogesh23).</p>
-          <p>2)Email Id: should have valid '@' symbol.</p>
+        <h5>Instructions:</h5>
+        <p>
+          1)Password:Alphanumeric More than
+          6 characters. Example (Viniths12,Kishore54).
+        </p>
+        <p>2)Email Id: should have valid '@' symbol and lowercase.</p>
       </div>
     </div>
   )

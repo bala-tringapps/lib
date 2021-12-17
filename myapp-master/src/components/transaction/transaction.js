@@ -28,11 +28,12 @@ const Transaction = () => {
   }, [])
 
   const renewrow = async(UserId, BookId) => {
-    axios
+await axios
       .put(`${BASE_URL}/transcation/${UserId}/${BookId}`, {})
       .then((response) => {
         alert(response.data.message)
       })
+
       try {
         const transdata = await axios.get(
           `${BASE_URL}/transcation/${UserId}`
@@ -42,10 +43,11 @@ const Transaction = () => {
         console.log(e)
       }
 
-
   }
 
-  const deleterow = async (BookId, UserId) => {
+
+
+  const deleterow = async (BookId, UserId,duedate) => {
     await axios
       .delete(`${BASE_URL}/transcation/${BookId}/${UserId}`)
       .then((response) => {
@@ -58,6 +60,8 @@ const Transaction = () => {
       })
 
     await axios.put(`${BASE_URL}/books/${BookId}`, {})
+
+    await axios.put(`http://localhost:4000/users/${UserId}/${duedate}`, {})
   }
   return (
     <div className='transaction'>
@@ -89,7 +93,7 @@ const Transaction = () => {
                   <button
                     className='btn'
                     onClick={() => {
-                      deleterow(item.BookId, item.UserId)
+                      deleterow(item.BookId, item.UserId,item.duedate)
                     }}
                   >
                     Return
