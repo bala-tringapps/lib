@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       
       // define association here
     
-  };
+  }
   Bookdetails.init({
     BookId:{type:DataTypes.INTEGER,
       autoIncrement:true,
