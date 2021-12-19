@@ -4,8 +4,7 @@ import axios from 'axios'
 import signup from '../components/images/signup.jpg'
 
 const Signup = () => {
-  var auth = localStorage.getItem('auth')
-
+  
   const BASE_URL = process.env.REACT_APP_KEY
 
   const handleSubmit = (e) => {
