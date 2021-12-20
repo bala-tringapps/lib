@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate({Bookdetails}) {
       this.belongsTo(Bookdetails, {foreignKey: "BookId"});
   }
-  };
+  }
   transcationdetails.init({
     TranscationId:{
       type:DataTypes.INTEGER,
