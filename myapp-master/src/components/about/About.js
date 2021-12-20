@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Navigation from '../navigation/nav'
 import './about.css'
 import user1 from '../images/user1.png'
