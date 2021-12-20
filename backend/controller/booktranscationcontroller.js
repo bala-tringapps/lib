@@ -4,10 +4,10 @@ const { transcationdetails } = require('../models')
 var gettranscation = async (req, resp) => {
   try {
     const UserId = req.params.UserId
-    const gettranscation = await transcationdetails.findAll({
+    const gettranscationdetails = await transcationdetails.findAll({
       where: { UserId: UserId },
     })
-    return resp.status(200).json(gettranscation)
+    return resp.status(200).json(gettranscationdetails)
   } catch (e) {
     console.log(e)
     return resp.status(500).send(e)
