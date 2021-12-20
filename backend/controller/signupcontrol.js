@@ -37,7 +37,7 @@ var log = async(req, resp) =>{
             return resp.status(202).json({"message":"user not found"});
          }
      }catch(e){
-         //console.log(e);
+        
          return resp.status(501).json({"message": "error"});
      }
     }
