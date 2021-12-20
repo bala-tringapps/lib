@@ -53,7 +53,7 @@ var updateduedate = async (req, resp) => {
   const UserId = req.params.UserId
   const BookId = req.params.BookId
   try {
-    const duedate = await db.sequelize.query(
+    await db.sequelize.query(
       `UPDATE transcationdetails SET duedate= date_add(renewdate,INTERVAL 16 DAY) WHERE UserId= ${UserId} AND BookId=${BookId}`
     )
 
