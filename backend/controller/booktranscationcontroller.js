@@ -21,7 +21,7 @@ var posttranscation = async (req, resp) => {
     })
     if (validation === null) {
       console.log(validation)
-      const gettranscation = await transcationdetails.create({
+      const gettranscationdetails = await transcationdetails.create({
         UserId,
         BookId,
         BookName,
@@ -29,7 +29,7 @@ var posttranscation = async (req, resp) => {
         duedate,
         renewdate,
       })
-      return resp.status(200).json(gettranscation)
+      return resp.status(200).json(gettranscationdetails)
     }
   } catch (e) {
     return resp.status(500).json({ message: e })
